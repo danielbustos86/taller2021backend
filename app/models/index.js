@@ -20,5 +20,5 @@ db.sequelize = sequelize;
 
 
 db.persona = require("./persona.model.js")(sequelize, Sequelize);
-// db.libro = require("./libro.model.js")(sequelize, Sequelize);
+db.auto = require("./auto.model.js")(sequelize, Sequelize);
 module.exports = db;
