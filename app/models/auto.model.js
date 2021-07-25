@@ -3,13 +3,17 @@ module.exports = (sequelize, Sequelize) => {
     patente: {
       type: Sequelize.STRING
     },
-    marca: {
-      type: Sequelize.STRING
+
+    marcaId: {
+      type: Sequelize.INTEGER,
+      references: {
+         model: 'marcas', // 'marcas' refers to table name
+         key: 'id', // 'id' refers to column name in marca table
+      }
     },
     ano: {
       type: Sequelize.INTEGER
     }
   });
-
   return Auto;
 };
